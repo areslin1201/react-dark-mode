@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React  from 'react'
+import 'antd/dist/antd.min.css'
+import './App.css'
+import { ThemeContext } from './theme/themeContext'
+import ToggleDarkMode from './components/toggleDarkMode'
 
 function App() {
+  const [darkMode, setDarkMode] = React.useState(true)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Dark and Light mode</h1>
+
+      <ThemeContext.Consumer>
+        {({ changeTheme }) => (
+          <ToggleDarkMode
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+            changeTheme={changeTheme}
+          />
+        )}
+      </ThemeContext.Consumer>
     </div>
   );
 }
