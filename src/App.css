@@ -41,11 +41,11 @@ body {
   background-color: #ffffff;
 }
 h1 {
-  color: #1c1e21;
+  color: #000000;
 }
 .dark-content {
-  background-color: #18191a;
+  background-color: #000000;
 }
 .dark-content h1 {
-  color: #f5f6f7;
+  color: #ffffff;
 }

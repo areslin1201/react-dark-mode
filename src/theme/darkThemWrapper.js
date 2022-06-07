@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react'
 import { ThemeContext, themes } from './themeContext'
 
 export default function DarkThemWrapper(props) {
-  const [theme, setTheme] = useState(themes.dark)
+  const [theme, setTheme] = useState(themes.light)  //定義初始主題為light theme
 
   function changeTheme(theme) {
     setTheme(theme)
   }
 
   useEffect(() => {
-    switch (theme) {
-      case themes.light:
+    switch (theme) { //主題切換為 dark mode 時增加 dark className
+      case themes.dark:
         document.body.classList.add('dark-content')
         break;
-      case themes.dark:
+      case themes.light:
       default:
         document.body.classList.remove('dark-content')
         break;

@@ -5,7 +5,7 @@ import { ThemeContext } from './theme/themeContext'
 import ToggleDarkMode from './components/toggleDarkMode'
 
 function App() {
-  const [darkMode, setDarkMode] = React.useState(true)
+  const [darkMode, setDarkMode] = React.useState(false)
 
   return (
     <div className="App">

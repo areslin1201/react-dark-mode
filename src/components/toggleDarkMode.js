@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch } from 'antd'
-import { themes } from "../theme/themeContext";
+import { themes } from '../theme/themeContext'
 
 const ToggleDarkMode = ({ darkMode, setDarkMode, changeTheme }) => {
   const onChange = () => {
